@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "Auto CSGO",
+    "description": "Auto CSGO gumble",
+    "version": "0.1",
+    "icons": {
+		"128": "logo.png",
+		"64": "logo.png",
+		"32": "logo.png",
+		"16": "logo.png"
+	},
+    "browser_action": {
+        "default_icon": "logo.png" ,
+        "default_title": "Auto CSGO",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+        "matches": [ "https://www.csgostrong.com/*" ],
+        "js": [ "jquery-3.0.0.min.js" , "background.js" ]
+    }],
+    "background": {
+        "scripts": ["background.js"] 
+    },
+    "permissions": [
+        "activeTab"
+    ]
+}
